@@ -1,15 +1,15 @@
-1. Explain what the simple List Component does.
-This React **List Component** displays a list of items, where each item is represented as a **SingleListItem** component which is passed the item's **text** and its **index** within the list. We also pass isSelected a boolean value to determine if the SingleListItem is selected or not, and onClickHandler which will handle the list whenever an item in the list is clicked on. 
+Q1. Explain what the simple List Component does.
+Ans: This React **List Component** displays a list of items, where each item is represented as a **SingleListItem** component which is passed the item's **text** and its **index** within the list. We also pass isSelected a boolean value to determine if the SingleListItem is selected or not, and onClickHandler which will handle the list whenever an item in the list is clicked on. 
  The SingleListItem component can be selected by clicking on it. When an item is selected, its background color **changes from red to green**.
 
-2. What problems / warnings are there with code?
-The problems/warnings with the code are:
+Q2. What problems / warnings are there with code?
+Ans: The problems/warnings with the code are:
 1.	**Intital Value in useState hook**: The setSelectedIndex useState hook is being called incorrectly. It should be passed an initial value, but it is not.
 2.	**Proper destructing of useState hook**: Moreover, the useState hook returns two values selectedIndex (the current state) and setSelectedIndex (a settter function that updates the state) which are not properly ordered in the given code. The current state (selectedIndex) should be put before the function (setSelectedIndex) in the destructing the array like [selectedIndex, setSelectedIndex]. 
 3.	**isSelected prop**: The isSelected prop of the SingleListItem component should be a boolean, but it is being passed the selectedIndex state value, which is a number.
 4.	**The propTypes declaration**: The propTypes declaration for the items prop of the WrappedListComponent is incorrect, also shapeof property doesn’t exists. It should be PropTypes.arrayOf(PropTypes.shape({text: PropTypes.string.isRequired })) .
 
-3. Please fix, optimize, and/or modify the component as much as you think is necessary.
+Q3. Please fix, optimize, and/or modify the component as much as you think is necessary.
 // here is the code
 
 ```
