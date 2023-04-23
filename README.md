@@ -12,7 +12,7 @@ The problems/warnings with the code are:
 3. Please fix, optimize, and/or modify the component as much as you think is necessary.
 // here is the code
 
-`
+```
 import React, { useState, useEffect, memo } from 'react';
 import PropTypes from 'prop-types';
 
@@ -95,4 +95,4 @@ WrappedListComponent.defaultProps = {
 
 const List = memo(WrappedListComponent);
 
-export default List;`
+export default List;```
